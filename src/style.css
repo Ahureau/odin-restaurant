@@ -1,3 +1,160 @@
-p {
-    color: red;
+Piccalilli reset
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+
+/* Styling */
+
+@font-face {
+    font-family: 'zapfino';
+    src: url('./Fonts/zapfino-cufonfonts-webfont/Zapfino.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'caviarDreams';
+    src: url('./Fonts/Caviar-Dreams/Caviar_Dreams_Bold.ttf') format('truetype'),
+        url('./Fonts/Caviar-Dreams/CaviarDreams.ttf') format('truetype'),
+        url('./Fonts/Caviar-Dreams/CaviarDreams_BoldItalic.ttf') format('truetype'),
+        url('./Fonts/Caviar-Dreams/CaviarDreams_Italic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    background-color: #FEF7ED;
+    margin: 0;
+    font-family: caviarDreams, Arial, Helvetica, sans-serif;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    font-family: zapfino, cursive;
+    text-wrap: nowrap;
+    height: 100%;
+}
+
+header {
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-top: 0.3rem;
+    border-bottom: solid 1px black;
+}
+
+nav {
+    display: flex;
+    gap: 0.5rem;
+    padding-right: 6rem;
+}
+
+nav>button {
+    margin-bottom: -1px;
+    appearance: none;
+    background-color: transparent;
+    width: 12.5rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    border-width: 1px 1px 0 1px;
+    border-radius: 20px 20px 0 0;
+    border-color: black;
+    box-shadow: inset 0 -1px #FEF7ED;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
 }
