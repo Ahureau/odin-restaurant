@@ -39,7 +39,8 @@ const menuLine = function(item, description){
     itemName.textContent = item;
 
     const itemDesc = document.createElement("p");
-    itemDesc.textContent = `—${description}`;
+    itemDesc.classList.add("itemDesc");
+    itemDesc.textContent = `— ${description}`;
 
     // add to li
     line.appendChild(itemName);

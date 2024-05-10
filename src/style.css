@@ -97,17 +97,17 @@ textarea:not([rows]) {
 @font-face {
     font-family: 'zapfino';
     src: url('./Fonts/zapfino-cufonfonts-webfont/Zapfino.woff') format('woff');
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'caviarDreams';
-    src: url('./Fonts/Caviar-Dreams/Caviar_Dreams_Bold.ttf') format('truetype'),
-        url('./Fonts/Caviar-Dreams/CaviarDreams.ttf') format('truetype'),
+    src: url('./Fonts/Caviar-Dreams/CaviarDreams.ttf') format('truetype'),
+        url('./Fonts/Caviar-Dreams/Caviar_Dreams_Bold.ttf') format('truetype'),
         url('./Fonts/Caviar-Dreams/CaviarDreams_BoldItalic.ttf') format('truetype'),
         url('./Fonts/Caviar-Dreams/CaviarDreams_Italic.ttf') format('truetype');
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -177,12 +177,10 @@ nav>button {
     align-items: center;
 }
 
-.listItem {
+.menuBuilt {
     display: flex;
-}
-
-.itemName {
-    font-weight: bold;
+    flex-direction: column;
+    gap: 4rem;
 }
 
 .menuItem {
@@ -191,8 +189,16 @@ nav>button {
     gap: 1.5rem;
 }
 
-.menuBuilt {
+.listItem {
     display: flex;
-    flex-direction: column;
-    gap: 4rem;
+    gap: 0.4rem;
+    font-size: 1.1rem;
+}
+
+.itemName {
+    font-weight: bold;
+}
+
+.itemDesc {
+    color: #727272;
 }
