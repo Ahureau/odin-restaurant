@@ -19,6 +19,10 @@ const menu = {
         "Mousse au Chocolat Noir": "Silky dark chocolate mousse made with avocado. €8",
         "Tarte aux Pommes": "Apple tart with almond frangipane and caramel drizzle. €9",
     },
+    "Boissons": {
+        "Vin Biologique": "Selection of organic red, white, and rosé wines. Glass €6 / Bottle €22",
+        "Jus Frais": "Freshly squeezed juice of the day. €4",
+    },
 }
 
 
@@ -89,6 +93,7 @@ const menuModule = (function(){
 
     // Function to build the page from all previous elements
     const addToPage = function (parent) {
+        parent.style.gap = "4rem";
         parent.appendChild(header);
         parent.appendChild(buildMenu());
     }

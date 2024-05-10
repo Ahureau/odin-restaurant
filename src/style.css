@@ -107,7 +107,7 @@ textarea:not([rows]) {
         url('./Fonts/Caviar-Dreams/CaviarDreams.ttf') format('truetype'),
         url('./Fonts/Caviar-Dreams/CaviarDreams_BoldItalic.ttf') format('truetype'),
         url('./Fonts/Caviar-Dreams/CaviarDreams_Italic.ttf') format('truetype');
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -166,6 +166,7 @@ nav>button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 6rem;
 }
 
 #content {
@@ -181,5 +182,17 @@ nav>button {
 }
 
 .itemName {
-    font-weight: bolder;
+    font-weight: bold;
+}
+
+.menuItem {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menuBuilt {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 }
