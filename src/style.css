@@ -103,18 +103,41 @@ textarea:not([rows]) {
 
 @font-face {
     font-family: 'caviarDreams';
-    src: url('./Fonts/Caviar-Dreams/CaviarDreams.ttf') format('truetype'),
-        url('./Fonts/Caviar-Dreams/Caviar_Dreams_Bold.ttf') format('truetype'),
-        url('./Fonts/Caviar-Dreams/CaviarDreams_BoldItalic.ttf') format('truetype'),
-        url('./Fonts/Caviar-Dreams/CaviarDreams_Italic.ttf') format('truetype');
-    font-weight: 400;
+    src: url('./Fonts/Caviar-Dreams/CaviarDreams.ttf') format('truetype');
+    font-weight: 500;
     font-style: normal;
+}
+@font-face {
+    font-family: 'caviarDreams';
+    src: url('./Fonts/Caviar-Dreams/Caviar_Dreams_Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'caviarDreams';
+    src: url('./Fonts/Caviar-Dreams/CaviarDreams_BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'caviarDreams';
+    src: url('./Fonts/Caviar-Dreams/CaviarDreams_Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+:root {
+    --background-color: #FEF7ED;
+    --secondary-background: #fbe2be;
+    --primary-color: #2e1c03;
+    --secondary-color: #744706;
 }
 
 body {
-    background-color: #FEF7ED;
+    background-color: var(--background-color);
     margin: 0;
     font-family: caviarDreams, Arial, Helvetica, sans-serif;
+    color: var(--primary-color);
     display: grid;
     gap: 3rem;
     grid-template-columns: 1fr;
@@ -159,7 +182,7 @@ nav>button {
 }
 
 .selected {
-    border-bottom: solid 1px #FEF7ED;
+    border-bottom: solid 1px var(--background-color);
 }
 
 #mainContainer {
@@ -176,6 +199,11 @@ nav>button {
     flex-direction: column;
     align-items: center;
 }
+
+
+/* This section only for specific pages */
+
+/* Menu */
 
 .menuBuilt {
     display: flex;
@@ -195,10 +223,40 @@ nav>button {
     font-size: 1.1rem;
 }
 
-.itemName {
+.boldText {
     font-weight: bold;
 }
 
 .itemDesc {
-    color: #727272;
+    color: var(--secondary-color);
+}
+
+/* Contact */
+
+.contactSection,
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contactSection {
+    gap: 2rem;
+}
+
+.contactDetails {
+    gap: 0rem;
+}
+
+/* About */
+
+.aboutContain {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.aboutContain > img {
+    margin-top: 2rem;
 }

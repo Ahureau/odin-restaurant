@@ -35,7 +35,7 @@ const menuLine = function(item, description){
 
     // actual item
     const itemName = document.createElement("p");
-    itemName.classList.add("itemName");
+    itemName.classList.add("boldText");
     itemName.textContent = item;
 
     const itemDesc = document.createElement("p");

@@ -1,6 +1,6 @@
 // This is the module for the "home" page of Belle Botanique.
 
-import beetrootImg from "../images/beetroot.png"
+import beetrootImg from "../images/beetroot.png";
 
 const homeModule = (function(){
 
@@ -12,13 +12,14 @@ const homeModule = (function(){
 
     const beet = new Image(475, 385);
     beet.src = beetrootImg;
-    beet.alt = "minimalistic drawing of a beet"
+    beet.alt = "minimalistic drawing of a beet";
 
     const closer = document.createElement("p");
     closer.textContent = "Local  ❦  Seasonal  ❦  Creative";
 
     // Function to build the page from all previous elements
     const addToPage = function(parent){
+        parent.style.gap = "2rem";
         parent.appendChild(header)
         parent.appendChild(opener);
         parent.appendChild(beet);
