@@ -19,9 +19,11 @@ const aboutModule = (function () {
 
                         The restaurant’s ambiance mirrors the ethos of its menu—reclaimed wood,  handcrafted pottery, and an indoor garden. Sunlight streams through large windows, casting a welcoming glow over the dining area.`;
 
-    const inside = new Image(781, 900);
+    const inside = new Image(900, 900);
     aboutContain.appendChild(inside);
     inside.src = insideImg;
+    inside.style.width = "750px";
+    inside.style.height = "750px";
     inside.alt = "View of the inside of the restaurant with lush plants and a glass ceiling";
 
     const closer = document.createElement("p");
